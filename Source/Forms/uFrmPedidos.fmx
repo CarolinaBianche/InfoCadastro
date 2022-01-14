@@ -1,0 +1,93 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 778
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Rectangle1: TRectangle
+    Align = Top
+    Fill.Color = xFF828080
+    Size.Width = 778.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object Label7: TLabel
+      Align = Top
+      StyledSettings = [Family]
+      Margins.Top = 5.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 778.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'WK Technology - Pedidos'
+      TabOrder = 0
+    end
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 778.000000000000000000
+    Size.Height = 430.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object lytbottom: TLayout
+      Align = Bottom
+      Position.Y = 380.000000000000000000
+      Size.Width = 778.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object rect_bottom: TRectangle
+        Align = Client
+        Size.Width = 778.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+    end
+    object lyt_grid: TLayout
+      Align = Left
+      Size.Width = 433.000000000000000000
+      Size.Height = 380.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object grdProdutosAdd: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 433.000000000000000000
+        Size.Height = 380.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 413.000000000000000000
+        Viewport.Height = 339.000000000000000000
+        object colCodigo: TColumn
+          Header = 'C'#243'digo'
+          Size.Width = 57.000000000000000000
+        end
+        object colDescricao: TStringColumn
+          Header = 'Descri'#231#227'o '
+          Size.Width = 148.000000000000000000
+        end
+        object colQtd: TIntegerColumn
+          Header = 'Qtd'
+          Size.Width = 42.000000000000000000
+        end
+        object colVlrUni: TCurrencyColumn
+          Header = 'Vlr.Uni'
+          Size.Width = 87.000000000000000000
+        end
+        object colVlrTot: TCurrencyColumn
+          Header = 'Vlr.Total'
+        end
+      end
+    end
+  end
+end

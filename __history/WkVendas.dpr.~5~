@@ -1,0 +1,16 @@
+program WkVendas;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  Model.Connection in 'Source\Conexao\Model.Connection.pas',
+  uFrmMain in 'Source\Forms\uFrmMain.pas' {FrmMain},
+  uCliente in 'Classes\uCliente.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TFrmMain, FrmMain);
+  Application.Run;
+end.
