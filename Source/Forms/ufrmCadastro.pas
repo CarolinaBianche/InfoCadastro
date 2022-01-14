@@ -324,7 +324,10 @@ begin
               MontaEmail;
               rectEmail.OnClick(Sender);
              end;
-       mrNo:ShowMessage('Cadastro Realizado com Sucesso');
+       mrNo:begin
+             MontaEmail;
+             ShowMessage('Cadastro Realizado com Sucesso');
+            end;
        end;
       end);
 

@@ -42,6 +42,7 @@ type
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
+    procedure LimparCampos;
   public
     { Public declarations }
   end;
@@ -64,6 +65,17 @@ begin
    caminho       := ExtractFilePath(ParamStr(0));
 
   edtAnexo.Text := Caminho + Arquivo;
+end;
+
+procedure TFrmEmail.LimparCampos;
+begin
+  cbxProvedor.ItemIndex :=0;
+  edtemailOrigem.Text := EmptyStr;
+  edtSenha.Text       := EmptyStr;
+  edtfrom.Text        := EmptyStr;
+  edtAssunto.Text     := EmptyStr;
+  memCorpo.Text       := EmptyStr;
+  edtAnexo.Text       := EmptyStr;
 end;
 
 procedure TFrmEmail.rectLimparClick(Sender: TObject);
@@ -122,6 +134,7 @@ begin
    ACBrMail.Send(false);
    ShowMessage('Email enviado com sucesso!');
    frmCadastro.rectLimpar.OnClick(Sender);
+   self.LimparCampos;
    Self.Close;
   except
    ShowMessage('Erro ao enviar email');
